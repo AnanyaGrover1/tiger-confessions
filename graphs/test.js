@@ -9,7 +9,7 @@ document.getElementById('search').addEventListener("click", function () {
 
     // if val is in array of words, update the svg accordingly
     // can't update both the word and the freq or counts parameter
-    // simultaneously, so the graph and switch will revert back to 
+    // simultaneously, so the graph and switch will revert back to
     // freq upon new search
     if (arr.indexOf(val) !== -1) {
         value = val;
@@ -43,8 +43,8 @@ var svg = d3.select("#my_dataviz")
   .append("g")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
-         
-// initialize x and y axes          
+
+// initialize x and y axes
 var x = d3.scaleTime()
     .range([ 0, width ]);
 
@@ -57,7 +57,7 @@ var yAxis = svg.append("g")
 
 
 // update function
-function update(chartType, field){  
+function update(chartType, field){
 
 // clear the previous line and label
 svg.selectAll("path").remove()
@@ -82,14 +82,14 @@ d3.csv(chartType,
 
   function(data) {
 
-// update x axis 
+// update x axis
     x.domain(d3.extent(data, function(d) { return +d.timedecade; }))
     xAxis.call(d3.axisBottom(x));
 
 // Add y axis
     y.domain([0, d3.max(data, function(d) { return +d.value; })])
       yAxis.transition().duration(1000).call(d3.axisLeft(y));
-    
+
 
     // Add the line
     svg.append("path")
