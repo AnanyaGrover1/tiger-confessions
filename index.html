@@ -54,7 +54,7 @@
 
   <!-- reference to your CSS -->
   <link href="style.css" rel="stylesheet" type="text/css" />
-  <link href="navbar.css" rel="stylesheet" type="text/css" />
+  <link href="nav.css" rel="stylesheet" type="text/css" />
 
   <!-- Load d3.js -->
   <script src="https://d3js.org/d3.v4.js"></script>
@@ -99,25 +99,30 @@
   <!-- Content goes here -->
 
   <nav id="top-nav">
-    <span>
-      <a href="https://dailyprincetonian.com">
-        <img class="logo" alt="The Daily Princetonian logo"
-          src="https://dirgyzwl2hnqq.cloudfront.net/8ab5ccf6483af37484451354a9d9e4e3/dist/img/prince_logo_6-20-2020.svg" /></a>
-      <!-- "https://dirgyzwl2hnqq.cloudfront.net/8ab5ccf6483af37484451354a9d9e4e3/dist/img/prince_logo_scrolled.png"  -->
-      <a href="#coverimage" style="text-decoration: none;"><span class="project-name">&ensp;|&ensp;Tiger Confessions Data Project</span>
-    </span></a>
-
+    <a class="nav-brand" href="index.html">
+      THE DAILY PRINCETONIAN <span class="project-name"> | Tiger Confessions Data Project</span>
+    </a>
+    <span class="menu-icon" onclick="expand()">&#9776;</span>
+    <div class="nav-links">
+      <a href="">Social</a>
+      <a href="">Academics</a>
+      <a href="">Campus Issues</a>
+      <a href="">Methodology</a>
+    </div>
   </nav>
-  <!-- <input type="text" id="selectButton">  -->
+
+<div id="top" style="height: 1px; position: relative; top: -35px"></div>
+
+  <!--  change this whole thing - graphic on top?-->
+
   <div class="intro">
     <div class="headline">
       <p class="overline"><strong>PROJECTS </strong><br></p>
-      <h1><span class="years">Tiger</span><br>Confessions</h1>
+      <h1>Tiger<br>Confessions</h1>
       <p class="underline"><em>analyzed by The Daily Princetonian data team</em></p>
       <p class="byline">By Anika Maskara and Elaine Huang</p>
     </div>
-    <img
-      src="https://assets.dailyprincetonian.com/projects.dailyprincetonian.com/140-years-prince-history/clippings-01.png">
+
   </div>
   <div class="intro-text">
     <p>
@@ -140,6 +145,8 @@
           <p> i was investigated by mat202 i didn’t cheat i worked with a group of other mat202 students and one of the answers i discussed with them they apparently got from an online source… i didn’t feel i belonged at princeton after being belittled attacked and threatened for over an hour today by odus </p>
       </div>
     </div>
+    <br>
+    <br>
 
     <div class = "confession">
       <div class = "post_date">
@@ -149,6 +156,8 @@
           <p> i was investigated by mat202 i didn’t cheat i worked with a group of other mat202 students and one of the answers i discussed with them they apparently got from an online source… i didn’t feel i belonged at princeton after being belittled attacked and threatened for over an hour today by odus </p>
       </div>
     </div>
+    <br>
+    <br>
 
     <div class = "confession">
       <div class = "post_date">
@@ -158,6 +167,8 @@
           <p> i was investigated by mat202 i didn’t cheat i worked with a group of other mat202 students and one of the answers i discussed with them they apparently got from an online source… i didn’t feel i belonged at princeton after being belittled attacked and threatened for over an hour today by odus </p>
       </div>
     </div>
+    <br>
+    <br>
 
     <p>
       To help you explore our findings, for each decade, we’ve summarized a few emblematic terms, sized relatively to
