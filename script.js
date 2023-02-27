@@ -145,7 +145,7 @@ let wordCloudDict = {
     ]
 }
 
-let myColor = "#F8F4EA";
+let myColor = "#1a1a1a";
 // set the dimensions and margins of the graph
 let margin = { top: 10, right: 50, bottom: 30, left: 50 },
     width = 500 - margin.left - margin.right,
@@ -243,7 +243,8 @@ d3.csv("https://assets.dailyprincetonian.com/projects.dailyprincetonian.com/140-
         .attr("dy", "1em")
         .attr("class", "chart-title")
         .style("text-anchor", "middle")
-        .text("Mentions per 100,000 words");
+        .text("Mentions per 100,000 words")
+        .style("fill", myColor);
 
 
     let line = svg

@@ -1,12 +1,13 @@
 * {
     margin: 0; padding: 0;
+    color:#1a1a1a
    
    
   }
   html, body{
     /* background-color: #F8F4EA; */
     font-family: minion-pro;
-    background-color: #1a1a1a;
+    background-color: #f7e0d1;
   }
 
 
@@ -19,22 +20,22 @@
 }
 
 .intro{
-  background-color: #1a1a1a;
+  background-color: #f7e0d1;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  min-height: 100vh;
+  min-height: 80vh;
 }
 
 .intro img{
   width: 50%;
-  opacity: 70%;
-  padding-left: 3%;
+
+  padding-right: 3%;
 }
 
 .intro .headline{
-  color: white;
+  color: #1a1a1a;
   font-family: franklin-gothic-urw;
   line-height: 40px;
 }
@@ -265,7 +266,7 @@ path.domain{
   text-decoration: none;
   opacity: 75%;
   font-family: franklin-gothic-urw, sans-serif;
-  color: #F8F4EA;
+  color: #1a1a1a;
 }
 
 #navigation ul li a:hover{
