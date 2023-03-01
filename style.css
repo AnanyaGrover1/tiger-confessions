@@ -1,8 +1,8 @@
 * {
     margin: 0; padding: 0;
     color:#1a1a1a
-   
-   
+
+
   }
   html, body{
     /* background-color: #F8F4EA; */
@@ -15,7 +15,7 @@
     color: black;
     text-decoration: none;
     font-size: 30px;
-    
+
 
 }
 
@@ -69,7 +69,7 @@
   margin-top: 50px;
   color: #F8F4EA;
   font-family: franklin-gothic-urw;
-
+  align-items: center;
 
   font-size: 19px;
 }
@@ -252,7 +252,7 @@ path.domain{
   display: flex;
   flex-direction: column;
   transition: height .4s ease-in-out;
-  
+
 
 }
 .active{
@@ -295,7 +295,7 @@ path.domain{
 
 
 /* sets different rules for narrower screens (usually meaning mobile) If
-you want to quickly test how this works on your computer, just make your 
+you want to quickly test how this works on your computer, just make your
 browser window really skinny */
 @media screen and (max-width: 800px) {
 
@@ -309,7 +309,7 @@ browser window really skinny */
     .mountain-block{
       align-items: center;
     }
-    
+
     .graph-block-container{
       width: 90%;
     }
@@ -344,21 +344,28 @@ browser window really skinny */
 
 .image-block-container img{
   width: 72vw;
-  height: 48vw; 
+  height: 48vw;
 }
 
+}
+
+.confession-list{
+  display:flex;
+  justify-content: center;
 }
 
 .confession {
   width: -webkit-fit-content;
   width: -moz-fit-content;
-  width: fit-content;
+  width: 80%;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   background: #fff;
   padding: 10px;
   color: #999;
   border-radius: 5px;
   font-family: sans-serif;
+  margin:auto;
+
 }
 
 .post_content {
