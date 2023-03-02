@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- usually this can just be the headline, but check in -->
+  <title>Tiger Confessions Project</title>
+  <!--
+        CHANGE THIS! "preview-img.png" defines what the preview image will be for
+        links and social media, so be sure to change this to whatever the
+         dominant media will be
+    -->
+  <meta property="og:image"
+    content="https://assets.dailyprincetonian.com/projects.dailyprincetonian.com/140-years-prince-history/dommedia-01.png">
+
+  <!--
+        CHANGE THIS! Make the content something meaningful to the article
+        (reach out to editor for suggestions if needed)
+    -->
+  <meta property=“og:description”
+    content="At The Daily Princetonian, we’re used to focusing on the present — reporting on stories that unfold as we write.
+
+  With this project, we at the ‘Prince’, the second-oldest college newspaper in the country, took a step back. Leveraging data from the The Daily Princetonian Larry Dupraz Archives, kindly shared with us by Mudd Library, we immersed ourselves in decades worth of print publications in the hope of better understanding the journey the ‘Prince’ and the University have been on over the past 140 years." />
+
+  <!-- defines standard character set—useful for ensuring curly quotes
+      aren't corrupted by different encodings -->
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+  <!-- ensures mobile layout works-->
+  <meta name="viewport" content="width=device-width">
+
+
+  <!-- link to our logo for favicon -->
+  <link rel="icon" type="image/png"
+    href="https://dirgyzwl2hnqq.cloudfront.net/ff9419fb986f760c1b0b24d4b9046051/dist/img/favicons/apple-icon-57x57.png" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics COMMENT OUT UNTIL PUB -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-H0QFG1LJXS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-H0QFG1LJXS');
+  </script> -->
+  <!--/site tag -->
+
+  <!--
+        a reference to our brand fonts (if there's any Adobe font not
+        available on the stylesheet, let the head digital news
+        editor know and it can be added)
+    -->
+  <link rel="stylesheet" href="https://use.typekit.net/gkx8zdh.css">
+
+  <!-- reference to your CSS -->
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="nav.css" rel="stylesheet" type="text/css" />
+
+  <!-- Load d3.js -->
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  </script>
+</head>
+
+<body>
+
+    <nav id="top-nav">
+        <a class="nav-brand" href="index.html">
+          THE DAILY PRINCETONIAN <span class="project-name"> | Tiger Confessions Data Project</span>
+        </a>
+        <span class="menu-icon" onclick="expand()">&#9776;</span>
+        <div class="nav-links">
+          <a href="/social.html">Social</a>
+          <a href="/mentalhealth.html">Mental Health</a>
+          <a href="/covid.html">COVID-19</a>
+          <a href="academics.html">Academics</a>
+          <a href="/campuslife.html">Campus Issues</a>
+          <a href="/methodology.html">Methodology</a>
+        </div>
+      </nav>
+
+    <div id="top" style="height: 1px; position: relative; top: -35px"></div>
+
+
+<!-- Cover image & caption -->
+
+
+<div class="titleText whiteHeaderText" style="padding-left: 5%; padding-bottom: 0;">
+        <h1 class="title" style="padding-top: 70px;">SOCIAL </h1>
+        <h2 class="subtitle" style="margin-top: -10px;"> Eating Clubs, Drugs and Alcohol, Sex
+        </h2>
+
+
+<!--
+<div class = 'intro'>
+<p> [Introductory text] </p>
+</div>
+-->
+</div>
+
+
+<div class="intro-text">
+
+<p>
+TigerConfessions served as a forum for students to discuss their social lives —  including eating clubs, Lawnparties, relationships and more.
+</p>
+</br>
+<h2>Eating Clubs</h2></br>
+
+
+<p>
+Of the eleven eating clubs, posters named Ivy the most on TigerConfessions with 226 mentions (though this may include posts referencing the Ivy League), followed closely by Cap and Gown, with 215 mentions. In contrast, students had less to say about Cannon Dial Elm Club and Cloister Inn, with just 51 and 67 mentions, respectively. Charter Club, however, was the eating club most commonly mentioned in posts containing the term “eating club”.
+</p>
+<p>
+Posts about Charter Club spiked in January 2020. The majority of Charter-related posts in January 2020 related to the club’s decision to become bicker as opposed to sign-in and to change their Friday event Charter Fridays from an event that all students could access to one which required attendees be on a list compiled by members. Charter <a href="https://www.dailyprincetonian.com/article/2020/11/charter-postpones-bicker-selective-sign-in">eventually decided to implement a selective sign-in process</a>. Participating members of Tiger Confessions had strong feelings about the change, ranging from “i am so angry about the new chosen proposal for charter” to “i have to stan.”
+</p>
+
+<!-- graph on posts about bicker -->
+
+<p>
+    Mentions of “bicker” typically remain low but peak towards late January, around when bicker takes place. In 2022, the fraction of posts mentioning bicker also peaked in November-December, when many eating clubs started to hold pre-bicker events.
+    </p>
+
+
+
+<!-- Yay, no errors, warnings, or alerts! -->
+
+<p>
+    Posts containing “rush” increase generally towards the end of summer just before sorority and fraternity rush, which typically takes place towards the beginning of the fall semester. Fraternities and sororities are not officially recognized by the University. The most significant peak in posts about rush was a discussion about race and inclusion in fraternities and sororities in the summer of 2020, as part of a broader discussion about race following the murder of George Floyd as it related to racism during the sorority rush process in summer 2020. Of all 48 posts mentioning “rush,” “rushing” or “rushed” in August 2020, about 14.6 percent mentioned “racism,” “racist,” or “racially”; 25 percent mentioned “diverse” or “diversity”; 25 percent mentioned “WOC” (an acronym for “women of color”); and about 16.7 percent mentioned “white.”
+    </p>
+
+    <div class = "confession">
+        <div class = "post_date">
+            <span class="post-date svelte-1x4mzm4">APRIL 2</span>
+        </div>
+        <div class = "post_content">
+            <p> is it weird that as a woc for one srat all of my individual rush chats have been with a person of my race it was nice at first but it felt like less of a coincidence and i felt hypervisible and tokenized
+              </p>
+        </div>
+      </div>
+      <br>
+
+      <div class = "confession">
+        <div class = "post_date">
+            <span class="post-date svelte-1x4mzm4">APRIL 2</span>
+        </div>
+        <div class = "post_content">
+            <p> was in a sorority last year and had to sit by and listen to a few of my white sisters talk about how they would not ever date poc this is also a group of girls that has fetishized black men especially athletes i got up to leave after a few minutes of that only one of the girls later texted me and asked if i was fine because i left so abruptly after i told her she was confused because i’m white why would i be hurt</p>
+        </div>
+      </div>
+      <br>
+
+    <!-- Yay, no errors, warnings, or alerts! -->
+
+<p>
+    “Theta,” in reference to one of the sororities on campus Kappa Alpha Theta, was mentioned in 19 posts, or about 39.6 percent of all posts with the word “rush” in August 2020. “Pi Phi,” in reference to another sorority on campus, Pi Beta Phi, was mentioned in 10 posts, or about 20.8 percent of all posts with “rush” in August 2020.
+    </p>
+    <p>
+    By August 2021, the discussion seemed to be over. No posts in August 2021 that mentioned the word “rush” also included the words “diverse,” diversity,” “WOC,” “racism,” “racist,” or “racially.”
+    </p>
+
+</br>
+
+
+    <!-- section end -->
+
+<h2>Drugs and Alcohol</h2></br>
+
+
+<p>
+Some students used TigerConfessions to discuss their alcohol use. Overall, .35 percent of posts analyzed contained the word “drunk.” The number of posts containing the word “drunk” was at an all-time peak in January and February 2020, just prior to the start of the pandemic. The fraction of posts containing the word “drunk” was also higher just before the pandemic than it was for the remainder of 2020 and all of 2021. 39 posts during this peak contained the word “drunk.” Of those, 10 posts were about the poster’s love life.
+</p>
+</br>
+
+<h2>Sex</h2></br>
+ <!-- SEX graph -->
+
+
+<p>
+    The fraction of posts containing the word “sex” peaked in March of 2021.
+    </p>
+    <p>
+    Of the 48 posts containing the word “sex” in March 2021, about 10.4 percent mentioned “Whitman.” No other residential colleges were mentioned in posts containing the word “sex” besides Butler (one post, 2 percent of posts containing the word “sex” in March 2021). Overall, 28.9 percent of the 45 posts containing the word “orgy” also contained “Whitman”.
+    </p>
+
+    <div class = "confession">
+        <div class = "post_date">
+            <span class="post-date svelte-1x4mzm4">APRIL 2</span>
+        </div>
+        <div class = "post_content">
+            <p> i walked in on the whitman orgy and it was just a bunch of people licking knees and feeling smooth toes
+              </p>
+        </div>
+      </div>
+      <br>
+
+      <!-- Yay, no errors, warnings, or alerts! -->
+
+<p>
+    About 14.6 percent of March 2021 posts that mentioned “sex” also mentioned masturbation. At the time, the University’s <a href="https://campuslife.princeton.edu/social-contract-for-spring-2021">social contract</a> required masks, discouraged students from coming within six feet of others and put strict capacity constraints on indoor spaces. Peer Health Advisors encouraged opting for masturbation instead of sex or having sex masked.
+    </p>
+
+
+    <br>
+
+    <div><h2 style = "text-align: center;">***</h2></div>
+    <br>
+
+  </div>
+
+</div>
+</body>
+<script type="module" src="script.js"></script>
+<script type="module" src="nav.js"></script>
+
+
+
+</html>

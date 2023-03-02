@@ -1,7 +1,7 @@
-import { arr } from "./array.js";
+import { arr } from "./array3.js";
 
 // default word plotted
-var value = "editors";
+var value = "hi";
 
 // "search" bar
 document.getElementById('search').addEventListener("click", function () {
@@ -82,6 +82,8 @@ d3.csv(chartType,
 
   function(data) {
 
+
+
 // update x axis
     x.domain(d3.extent(data, function(d) { return +d.timedecade; }))
     xAxis.call(d3.axisBottom(x));
@@ -95,7 +97,7 @@ d3.csv(chartType,
     svg.append("path")
       .datum(data)
       .attr("fill", "none")
-      .attr("stroke", "steelblue")
+      .attr("stroke", "brown")
       .attr("stroke-width", 1.5)
       .attr("d", d3.line()
         .x(function(d) { return x(d.timedecade) })
@@ -103,9 +105,10 @@ d3.csv(chartType,
         )
 
 
+
 })
 }
 
 
 // default
-update('allwordsfreq.csv', "editors")
+update('tc_data_for_web_with_dates.csv', "hi")

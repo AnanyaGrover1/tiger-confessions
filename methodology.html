@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- usually this can just be the headline, but check in -->
+  <title>Tiger Confessions Project</title>
+  <!--
+        CHANGE THIS! "preview-img.png" defines what the preview image will be for
+        links and social media, so be sure to change this to whatever the
+         dominant media will be
+    -->
+  <meta property="og:image"
+    content="https://assets.dailyprincetonian.com/projects.dailyprincetonian.com/140-years-prince-history/dommedia-01.png">
+
+  <!--
+        CHANGE THIS! Make the content something meaningful to the article
+        (reach out to editor for suggestions if needed)
+    -->
+  <meta property=“og:description”
+    content="At The Daily Princetonian, we’re used to focusing on the present — reporting on stories that unfold as we write.
+
+  With this project, we at the ‘Prince’, the second-oldest college newspaper in the country, took a step back. Leveraging data from the The Daily Princetonian Larry Dupraz Archives, kindly shared with us by Mudd Library, we immersed ourselves in decades worth of print publications in the hope of better understanding the journey the ‘Prince’ and the University have been on over the past 140 years." />
+
+  <!-- defines standard character set—useful for ensuring curly quotes
+      aren't corrupted by different encodings -->
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+  <!-- ensures mobile layout works-->
+  <meta name="viewport" content="width=device-width">
+
+
+  <!-- link to our logo for favicon -->
+  <link rel="icon" type="image/png"
+    href="https://dirgyzwl2hnqq.cloudfront.net/ff9419fb986f760c1b0b24d4b9046051/dist/img/favicons/apple-icon-57x57.png" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics COMMENT OUT UNTIL PUB -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-H0QFG1LJXS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-H0QFG1LJXS');
+  </script> -->
+  <!--/site tag -->
+
+  <!--
+        a reference to our brand fonts (if there's any Adobe font not
+        available on the stylesheet, let the head digital news
+        editor know and it can be added)
+    -->
+  <link rel="stylesheet" href="https://use.typekit.net/gkx8zdh.css">
+
+  <!-- reference to your CSS -->
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="nav.css" rel="stylesheet" type="text/css" />
+
+  <!-- Load d3.js -->
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  </script>
+</head>
+
+<body>
+
+    <nav id="top-nav">
+        <a class="nav-brand" href="index.html">
+          THE DAILY PRINCETONIAN <span class="project-name"> | Tiger Confessions Data Project</span>
+        </a>
+        <span class="menu-icon" onclick="expand()">&#9776;</span>
+        <div class="nav-links">
+          <a href="/social.html">Social</a>
+          <a href="/mentalhealth.html">Mental Health</a>
+          <a href="/covid.html">COVID-19</a>
+          <a href="academics.html">Academics</a>
+          <a href="/campuslife.html">Campus Issues</a>
+          <a href="/methodology.html">Methodology</a>
+        </div>
+      </nav>
+
+    <div id="top" style="height: 1px; position: relative; top: -35px"></div>
+
+
+<!-- Cover image & caption -->
+
+
+<div class="titleText whiteHeaderText" style="padding-left: 5%; padding-bottom: 0;">
+        <h1 class="title" style="padding-top: 70px;">METHODOLOGY </h1>
+        <h2 class="subtitle" style="margin-top: -10px;"> Dataset, Cleaning, and Metrics
+        </h2>
+
+
+<!--
+<div class = 'intro'>
+<p> [Introductory text] </p>
+</div>
+-->
+</div>
+
+
+<div class="intro-text">
+
+<!-- Yay, no errors, warnings, or alerts! -->
+
+<p>
+    <strong>Dataset</strong>
+    </p>
+    <p>
+    The dataset used in this analysis was sourced directly from the anonymous moderator of the group on January 14, 2023 and, according to them, contains the full text of all posted submissions from October 22, 2019 to January 12, 2023. During this period, there have been several moderator and group name changes to the Facebook group, and the ‘Prince’ did not independently verify that all of the posts on the Facebook group are included in the dataset.
+    </p>
+    <p>
+    <strong>Data Cleaning & Tokenization</strong>
+    </p>
+    <p>
+    We removed all punctuation and capitalization from submissions, meaning that words like “princeton,” “Princeton,” and “pRinceton” are all recognized as the same term.<strong> </strong>Unless otherwise noted, to track the frequency of particular terms, we used a whitespace tokenizer (“I love data” would be tokenized to “I”, “love”, “data”).
+    </p>
+    <h2>Frequently Used Metrics</h2></br>
+
+
+    <p>
+    <strong>Post Mentions </strong>
+    </p>
+    <p>
+    All of our word frequency charts plot both the number of posts that contain a particular word over time and the fraction of posts that contain that word in a given month over time.
+    </p>
+    <p>
+    <strong>Word Co-Occurrence</strong>
+    </p>
+    <p>
+    One statistic we looked at was word co-occurrence — the number of posts containing one word that also contain another word. So, for example, if 100 posts contained the word “Princeton”, and 10 of those posts contained the word “University” (i.e. contain both “Princeton” and “University”), the word co-occurrence would be 10/100, or 10 percent.
+    </p>
+    <p>
+    <strong>Word Association and Word Clouds</strong>
+    </p>
+    <p>
+    When finding the most common words used in a post containing a given word and creating word clouds, we removed stopwords (i.e. commonly used words such as “the” and “and”). We used the <a href="https://pypi.org/project/wordcloud/">Python word cloud generator</a> to generate the word clouds — it also counts common <a href="https://en.wikipedia.org/wiki/Bigram">bigrams</a>, so words that appear near each other in the word cloud also appear close together in posts. For instance, in the word cloud for “divest”, “divest” appears more than once by itself and with “divest princeton.” The “most common words” highlighted in the article include, unless stated otherwise, the 30 most common words.
+    </p>
+
+    <br>
+
+    <div><h2 style = "text-align: center;">***</h2></div>
+    <br>
+
+  </div>
+
+</div>
+</body>
+<script type="module" src="script.js"></script>
+<script type="module" src="nav.js"></script>
+
+
+
+</html>

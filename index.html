@@ -59,7 +59,7 @@
   <!-- Load d3.js -->
   <script src="https://d3js.org/d3.v4.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
-
+  <script type="module" src="/graphs/array3.js"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
   </script>
@@ -91,7 +91,7 @@
     });
   </script>
 
-  <base target="_blank">.
+  <!-- <base target="_blank"> -->
 
 </head>
 
@@ -130,8 +130,10 @@
     </div>
 
   </div>
-  <h1>Introduction</h1>
+
   <div class="intro-text">
+    <h1>Introduction</h1>
+    <br>
     <p>
       In May 2020, two months after students were sent home due to the COVID-19 pandemic,
       dozens enrolled in MAT 202: Linear Algebra with Applications were referred to the
@@ -140,6 +142,7 @@
       <a href="https://www.dailyprincetonian.com/article/2020/05/princeton-teaching-assistant-math-department-slader-mat202-academic-integrity-cheating-covid">The Daily Princetonian</a>.
       The details first spread to the student body, however, via TigerConfessions, an anonymous Facebook page.
       </p>
+    </br>
 
     <div class = "confession_list">
     <div class = "confession">
@@ -294,6 +297,31 @@
       those words to share in the summaries.
     </p> -->
     <br>
+
+    <div>
+      <label for="field">Search Word to Analyze</label>
+      </div>
+      <input type="text" id="field" name="field" required
+              size="20">
+
+
+      <button id="search">Search</button>
+
+      <!-- Create a div where the graph will take place -->
+      <div id="my_dataviz"></div>
+
+
+      <div class="toggle-wrapper">
+          <div id="showCount">
+            <p class="counts-label">Frequency/Counts</p>
+            <label class="switch">
+              <input type="checkbox" id="switch">
+              <span class="slider round"></span>
+            </label>
+          </div>
+      </div>
+
+      <script type="module" src="graphs/test.js"></script>
 
     <div><h2 style = "text-align: center;">***</h2></div>
     <br>

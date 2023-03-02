@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- usually this can just be the headline, but check in -->
+  <title>Tiger Confessions Project</title>
+  <!--
+        CHANGE THIS! "preview-img.png" defines what the preview image will be for
+        links and social media, so be sure to change this to whatever the
+         dominant media will be
+    -->
+  <meta property="og:image"
+    content="https://assets.dailyprincetonian.com/projects.dailyprincetonian.com/140-years-prince-history/dommedia-01.png">
+
+  <!--
+        CHANGE THIS! Make the content something meaningful to the article
+        (reach out to editor for suggestions if needed)
+    -->
+  <meta property=“og:description”
+    content="At The Daily Princetonian, we’re used to focusing on the present — reporting on stories that unfold as we write.
+
+  With this project, we at the ‘Prince’, the second-oldest college newspaper in the country, took a step back. Leveraging data from the The Daily Princetonian Larry Dupraz Archives, kindly shared with us by Mudd Library, we immersed ourselves in decades worth of print publications in the hope of better understanding the journey the ‘Prince’ and the University have been on over the past 140 years." />
+
+  <!-- defines standard character set—useful for ensuring curly quotes
+      aren't corrupted by different encodings -->
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+  <!-- ensures mobile layout works-->
+  <meta name="viewport" content="width=device-width">
+
+
+  <!-- link to our logo for favicon -->
+  <link rel="icon" type="image/png"
+    href="https://dirgyzwl2hnqq.cloudfront.net/ff9419fb986f760c1b0b24d4b9046051/dist/img/favicons/apple-icon-57x57.png" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics COMMENT OUT UNTIL PUB -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-H0QFG1LJXS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-H0QFG1LJXS');
+  </script> -->
+  <!--/site tag -->
+
+  <!--
+        a reference to our brand fonts (if there's any Adobe font not
+        available on the stylesheet, let the head digital news
+        editor know and it can be added)
+    -->
+  <link rel="stylesheet" href="https://use.typekit.net/gkx8zdh.css">
+
+  <!-- reference to your CSS -->
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="nav.css" rel="stylesheet" type="text/css" />
+
+  <!-- Load d3.js -->
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  </script>
+</head>
+
+<body>
+
+    <nav id="top-nav">
+        <a class="nav-brand" href="index.html">
+          THE DAILY PRINCETONIAN <span class="project-name"> | Tiger Confessions Data Project</span>
+        </a>
+        <span class="menu-icon" onclick="expand()">&#9776;</span>
+        <div class="nav-links">
+          <a href="/social.html">Social</a>
+          <a href="/mentalhealth.html">Mental Health</a>
+          <a href="/covid.html">COVID-19</a>
+          <a href="academics.html">Academics</a>
+          <a href="/campuslife.html">Campus Issues</a>
+          <a href="/methodology.html">Methodology</a>
+        </div>
+      </nav>
+
+    <div id="top" style="height: 1px; position: relative; top: -35px"></div>
+
+
+<!-- Cover image & caption -->
+
+
+<div class="titleText whiteHeaderText" style="padding-left: 5%; padding-bottom: 0;">
+        <h1 class="title" style="padding-top: 70px;">CAMPUS LIFE </h1>
+        <h2 class="subtitle" style="margin-top: -10px;"> USG, Lawnparties, Referenda, Divestments, Construction
+        </h2>
+
+
+<!--
+<div class = 'intro'>
+<p> [Introductory text] </p>
+</div>
+-->
+</div>
+
+
+<div class="intro-text">
+
+<p>
+    Many of the most engaging moments on campus were reflected in TigerConfessions. Students engaged on topics of divestment, optional or universal Pass/D/Fail (P/D/F) during the initial COVID lockdown, and contentious USG referenda.
+    </p>
+<h2>USG</h2></br>
+
+
+<!-- GRAPH ON USG -->
+
+<p>
+    The fraction of posts containing the word “USG” peaked in April 2020 and October 2022. The peak in April 2020 likely correlates with the <a href="https://www.dailyprincetonian.com/article/2020/03/princeton-coronavirus-grading-policy-pdf-debate">debate</a> around having universal or optional P/D/F options at the start of COVID. Students had strong opinions over whether or not the University should implement a mandatory P/D/F policy, with some students calling those who wanted universal P/D/F “lazy fuckers” and “undedicated scrubs,” whereas others took a different perspective, with one student writing: “I cannot believe that USG did nothing to advocate for universal PDF.” What the USG did and did not do on universal P/D/F became a key <a href="https://www.dailyprincetonian.com/article/2020/11/editorial-board-vote-allen-liu-22-for-president-undergraduate-student-government?fb_comment_id=3730124647037978_3731539280229848">issue</a> for discussion in the December 2020 USG presidential election, which former Academics Chair Christian Potter eventually <a href="https://www.dailyprincetonian.com/article/2020/11/princeton-university-student-government-christian-potter-fossil-fuels-voting">won</a>.
+    </p>
+    <p>
+    Of 50 posts in April 2020 that mentioned “USG,” 34 percent of posts mentioned “PDF”; 14 percent mentioned “fuck”; 30 percent mentioned “represent”; and 26 percent mentioned “poll”. The context of the posts that mentioned “poll” and “USG” were related to the lack of a USG poll on having an optional or universal P/D/F. The words “PDF” and “optional” were among the most common words used in a post containing the word “USG” for all time.
+    </p>
+
+<!-- LAWNPARTIES SECTION -->
+
+<h2>Lawnparties</h2></br>
+
+<p>
+Posts mentioning lawnparties are particularly common, with peaks in both May and September, leading up to spring and fall lawnparties respectively, and in the run-up to the announcement of the headliner.
+</p>
+
+<!-- GRAPH -->
+
+<p>
+    The <a href="https://www.dailyprincetonian.com/article/2020/09/usg-responds-to-lawnparties-backlash">amount</a> that USG spent on a virtual Lawnparties event in Fall 2020 drove a lot of the discussion, with the most common words associated with “lawnparties” being “USG,” “article,” “year,” “campus,” and “money.” The type of backlash that the virtual Lawnparties generated was the type of event that TigerConfessions best elevated.
+    </p>
+    <br>
+
+<!-- REFERENDA SECTION -->
+
+<h2>Referenda</h2></br>
+
+<!-- GRAPH -->
+
+<p>
+    The fraction of posts containing the word “referendum” hit an all-time peak in April of 2022, during discussion of a <a href="https://www.dailyprincetonian.com/article/2022/04/caterpillar-referendum-princeton-ads-israel-palestine-bds-princeton">controversial referendum</a> calling for the University to boycott the usage of Caterpillar machinery in campus construction projects given that the company also supplies machinery to the Israeli government. Referendums on divestment, election day as a holiday, and mental health generated nowhere near the amount of discussion as the Caterpillar referendum, which was extended due to a protracted battle over the victor in that referendum.
+    </p>
+
+<!-- GRAPH -->
+
+<p>
+    The fraction of posts containing “Israel” also hit a peak that month — though the country peaked multiple times in the group due to frequent campus debates.
+    </p>
+
+<!-- DIVESTMENTS SECTION -->
+
+<h2>Divestments</h2>
+
+<!--GRAPHS -->
+
+<p>
+    The fraction of posts containing the word “divest” has increased over time. Mentions peaked in February 2022, when Divest Princeton filed a legal complaint with the New Jersey Attorney General to press for complete divestment.
+    </p>
+
+<!-- CONSTRUCTION SECTION -->
+
+<h2>Construction</h2>
+
+<!-- GRAPHS HERE -->
+
+<p>
+    The fraction of posts containing the word “construction” peaked in March, July, and October of 2022. Since the 2021–2022 academic year, Princeton has undertaken significant <a href="https://www.dailyprincetonian.com/article/2022/03/princeton-sees-new-construction-across-campus-in-2021-2022-academic-year-more-to-begin-this-summer">construction</a> projects, including the building of Hobson College, a new art museum, a new School of Engineering and Applied Science, and a new geo-exchange system to help reach Princeton’s goal of being a net-zero carbon emissions campus by 2046.
+    </p>
+    <p>
+    Sentiment surrounding construction has been overall negative, with confessions such as: “the construction is pissing me off it wakes me up so early every day also i miss the art museum”
+    </p>
+    <!-- insert confession here -->
+    <div class = "confession">
+        <div class = "post_date">
+            <span class="post-date svelte-1x4mzm4">APRIL 2</span>
+        </div>
+        <div class = "post_content">
+            <p> the construction is pissing me off it wakes me up so early every day also i miss the art museum
+              </p>
+        </div>
+      </div>
+      <br>
+
+      <!-- insert confession here -->
+    <div class = "confession">
+        <div class = "post_date">
+            <span class="post-date svelte-1x4mzm4">APRIL 2</span>
+        </div>
+        <div class = "post_content">
+            <p> can all students who have to live near construction get reparations of some sort 😭 like this is actually unbearable.
+              </p>
+        </div>
+      </div>
+      <br>
+
+
+    <!-- INSERT WORD CLOUD -->
+
+<p>
+    The most common words used in posts containing “construction” include “campus”, “companies”, “noise”, “divestment”, “fossil”, and “room”.
+    </p>
+
+<p>
+    Students have a variety of avenues to express their views of key campus issues: from USG referendums to ‘Prince’ op-eds. TigerConfessions has served as a unique forum for Princeton students to express their opinions on campus issues because it allows students to do so anonymously.
+    </p>
+
+
+<!-- NEW SECTION?? -->
+
+<h2>More posts are submitted in the middle of the night </h2>
+
+<!-- INSERT GRAPH -->
+
+<p>
+    Submissions to TigerConfessions peak at midnight, with over 3000 of the group’s 50,210 posts submitted between 12–1 a.m.
+    </p>
+
+
+    <div><h2 style = "text-align: center;">***</h2></div>
+    <br>
+
+  </div>
+
+</div>
+</body>
+<script type="module" src="script.js"></script>
+<script type="module" src="nav.js"></script>
+
+
+
+</html>

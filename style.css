@@ -337,6 +337,7 @@ browser window really skinny */
       flex-direction: column;
     }
 
+  }
 
 .intro-text{
   width: 90%;
@@ -347,7 +348,43 @@ browser window really skinny */
   height: 48vw;
 }
 
+.title {
+
+  font-family: sofia-pro, sans-serif;
+	font-size: 6vw;
+  /* color: #6c249c; */
+	/* color: rgb(145, 189, 224); */
 }
+
+.subtitle {
+
+  font-family: sofia-pro-soft, sans-serif;
+	font-size: 2vw;
+	font-weight: 350;
+	/* color: rgb(51, 67, 119);  */
+
+}
+
+.whiteHeaderText  .title{
+
+  font-size: 4vw;
+  padding-bottom: 0.2em;
+
+
+  }
+
+  .whiteHeaderText .subtitle{
+
+    font-size: 2vw;
+
+    color: #c24532 !important;
+    font-style: italic;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  }
+
+
+
 
 .confession-list{
   display:flex;
@@ -379,4 +416,66 @@ browser window really skinny */
 .post_date {
   display: inline-block;
   font-weight: 300;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: orange;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px orange;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 17px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
