@@ -32,7 +32,7 @@ document.getElementById('switch').addEventListener("click", function() {
 
 // margins for the graph
 var margin = {top: 30, right: 30, bottom: 60, left: 60},
-    width = 600 - margin.left - margin.right,
+    width = 1000 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
@@ -84,7 +84,6 @@ d3.csv(chartType,
   function(data) {
 
 
-
 // update x axis
     x.domain(d3.extent(data, function(d) { return +d.month; }))
     xAxis.call(d3.axisBottom(x));
@@ -97,12 +96,15 @@ d3.csv(chartType,
     // Add the line
     svg.append("path")
       .datum(data)
-      .attr("fill", "none")
+      .transition().duration(1000)
+      .attr("fill", "brown")
       .attr("stroke", "brown")
       .attr("stroke-width", 1.5)
-      .attr("d", d3.line()
+      .attr("d", d3.area()
         .x(function(d) { return x(d.month) })
-        .y(function(d) { return y(d.value) })
+        .y0(height)
+        .y1(function(d) { return y(d.value) })
+
         )
 
 
