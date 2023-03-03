@@ -15,7 +15,7 @@ document.getElementById('search').addEventListener("click", function () {
         value = val;
 
         document.getElementById("switch").checked = false;
-        update('https:\/\/assets.dailyprincetonian.com/projects.dailyprincetonian.com/140-years-prince-history/allwordsfreq.csv', value)
+        update('graphs/tc_data_for_web_with_dates.csv', value)
     } else {
         alert("this word is not in the database!")
     }
@@ -24,15 +24,15 @@ document.getElementById('search').addEventListener("click", function () {
 // switching between freq and count graphs
 document.getElementById('switch').addEventListener("click", function() {
         if(document.getElementById('switch').checked){
-            update('https:\/\/assets.dailyprincetonian.com/projects.dailyprincetonian.com/140-years-prince-history/allwordsfreq.csv', value)
+            update('tc_data_for_web_with_dates.csv', value)
         } else {
-            update('allwordsfreq.csv', value)
+            update('tc_data_for_web_with_dates.csv', value)
         }
       });
 
 // margins for the graph
-var margin = {top: 10, right: 30, bottom: 60, left: 60},
-    width = 500 - margin.left - margin.right,
+var margin = {top: 30, right: 30, bottom: 60, left: 60},
+    width = 600 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
@@ -50,6 +50,7 @@ var x = d3.scaleTime()
 
 var xAxis = svg.append("g")
       .attr("transform", "translate(0," + height + ")")
+      .attr("color", "black")
 
 var y = d3.scaleLinear()
     .range([ height, 0 ]);
@@ -76,7 +77,7 @@ d3.csv(chartType,
 
   // formatting variables from csv
   function(d){
-    return { timedecade : d3.timeParse("%Y")(d.timedecade), value : d[field]}
+    return { month : d3.timeParse("%Y-%m")(d.Month), value : d[field]}
   },
 
 
@@ -85,12 +86,12 @@ d3.csv(chartType,
 
 
 // update x axis
-    x.domain(d3.extent(data, function(d) { return +d.timedecade; }))
+    x.domain(d3.extent(data, function(d) { return +d.month; }))
     xAxis.call(d3.axisBottom(x));
 
 // Add y axis
     y.domain([0, d3.max(data, function(d) { return +d.value; })])
-      yAxis.transition().duration(1000).call(d3.axisLeft(y));
+    yAxis.transition().duration(1000).call(d3.axisLeft(y));
 
 
     // Add the line
@@ -100,7 +101,7 @@ d3.csv(chartType,
       .attr("stroke", "brown")
       .attr("stroke-width", 1.5)
       .attr("d", d3.line()
-        .x(function(d) { return x(d.timedecade) })
+        .x(function(d) { return x(d.month) })
         .y(function(d) { return y(d.value) })
         )
 
