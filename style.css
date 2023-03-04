@@ -203,14 +203,15 @@ opacity: 1;
   padding-bottom: 5px;
 }
 
-
-g.tick line{
+/* comment the two below in or out in order to 
+add/remove axis lines and ticks */
+/* g.tick line{
   display: none;
 }
 
 path.domain{
   display: none;
-}
+} */
 
 .content{
   display: flex;
