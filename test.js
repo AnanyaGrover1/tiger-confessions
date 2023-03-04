@@ -50,10 +50,10 @@ var x = d3.scaleTime()
 
 var xAxis = svg.append("g")
       .attr("transform", "translate(0," + height + ")")
-      .attr("color", "black")
 
 var y = d3.scaleLinear()
     .range([ height, 0 ]);
+    
 var yAxis = svg.append("g")
 
 
