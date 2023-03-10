@@ -120,13 +120,64 @@ Posts about Charter Club spiked in January 2020. The majority of Charter-related
 
 <!-- graph on posts about bicker -->
 
+
+    <div id="hide">
+      <label for="field">Search Word to Analyze</label>
+
+      <input type="text" id="field" name="field" value="bicker" required
+              size="20">
+
+
+      <button id="search">Search</button>
+    </div>
+
+      <!-- Create a div where the graph will take place -->
+      <div id="my_dataviz"></div>
+      <div class="toggle-wrapper">
+          <div id="showCount">
+            <p class="counts-label">Frequency/Counts</p>
+            <label class="switch">
+              <input type="checkbox" id="switch">
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+
+
+
+
 <p>
     Mentions of “bicker” typically remain low but peak towards late January, around when bicker takes place. In 2022, the fraction of posts mentioning bicker also peaked in November-December, when many eating clubs started to hold pre-bicker events.
     </p>
 
 
 
-<!-- Yay, no errors, warnings, or alerts! -->
+<!-- "RUSH" GRAPH -->
+
+<div id="hide">
+  <label for="field_3">Search Word to Analyze</label>
+
+  <input type="text" id="field_3" name="field" value="rush" required
+          size="20">
+
+
+  <button id="search">Search</button>
+</div>
+
+  <!-- Create a div where the graph will take place -->
+  <div id="my_dataviz_3"></div>
+  <div class="toggle-wrapper">
+      <div id="showCount">
+        <p class="counts-label">Frequency/Counts</p>
+        <label class="switch_3">
+          <input type="checkbox" id="switch_3">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+
+
+
 
 <p>
     Posts containing “rush” increase generally towards the end of summer just before sorority and fraternity rush, which typically takes place towards the beginning of the fall semester. Fraternities and sororities are not officially recognized by the University. The most significant peak in posts about rush was a discussion about race and inclusion in fraternities and sororities in the summer of 2020, as part of a broader discussion about race following the murder of George Floyd as it related to racism during the sorority rush process in summer 2020. Of all 48 posts mentioning “rush,” “rushing” or “rushed” in August 2020, about 14.6 percent mentioned “racism,” “racist,” or “racially”; 25 percent mentioned “diverse” or “diversity”; 25 percent mentioned “WOC” (an acronym for “women of color”); and about 16.7 percent mentioned “white.”
@@ -177,6 +228,29 @@ Some students used TigerConfessions to discuss their alcohol use. Overall, .35 p
 
 <h2>Sex</h2></br>
  <!-- SEX graph -->
+ <div id="hide">
+  <label for="field_2">Search Word to Analyze</label>
+
+  <input type="text" id="field_2" name="field" value="sex" required
+          size="20">
+
+
+  <button id="search">Search</button>
+</div>
+
+  <!-- Create a div where the graph will take place -->
+
+  <div id="my_dataviz_2"></div>
+  <div class="toggle-wrapper">
+      <div id="showCount">
+        <p class="counts-label">Frequency/Counts</p>
+        <label class="switch_2">
+          <input type="checkbox" id="switch_2">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+
 
 
 <p>
@@ -213,6 +287,10 @@ Some students used TigerConfessions to discuss their alcohol use. Overall, .35 p
 
 </div>
 </body>
+<script type="module" src="test.js"></script>
+<script type="module" src="graph_2.js"></script>
+<script type="module" src="graph_3.js"></script>
+
 <script type="module" src="script.js"></script>
 <script type="module" src="nav.js"></script>
 

@@ -203,7 +203,7 @@ opacity: 1;
   padding-bottom: 5px;
 }
 
-/* comment the two below in or out in order to 
+/* comment the two below in or out in order to
 add/remove axis lines and ticks */
 /* g.tick line{
   display: none;
@@ -426,12 +426,83 @@ browser window really skinny */
   height: 17px;
 }
 
+.switch_2 {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+
+.switch_3 {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+
+.switch_4 {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+
+.switch_5 {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+
+.switch_6 {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+
 /* Hide default HTML checkbox */
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
+
+.switch_2 input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch_3 input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch_4 input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch_5 input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch_6 input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-wrapper{
+  padding-bottom:2em;
+
+}
+
 
 /* The slider */
 .slider {
@@ -479,4 +550,8 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+#hide {
+  display: none;
 }

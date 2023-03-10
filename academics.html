@@ -110,12 +110,82 @@
 
 
 <!-- INSERT GRAPH -->
+<!-- "grade" GRAPH -->
+
+
+<div id="hide">
+  <label for="field">Search Word to Analyze</label>
+
+  <input type="text" id="field" name="field" value="grade" required
+          size="20">
+
+
+  <button id="search">Search</button>
+</div>
+
+  <!-- Create a div where the graph will take place -->
+  <div id="my_dataviz"></div>
+  <div class="toggle-wrapper">
+      <div id="showCount">
+        <p class="counts-label">Frequency/Counts</p>
+        <label class="switch">
+          <input type="checkbox" id="switch">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+
+
+  <!-- "THESIS" GRAPH -->
+  <div id="hide">
+    <label for="field_2">Search Word to Analyze</label>
+
+    <input type="text" id="field_2" name="field" value="thesis" required
+            size="20">
+
+
+    <button id="search">Search</button>
+  </div>
+
+    <!-- Create a div where the graph will take place -->
+    <div id="my_dataviz_2"></div>
+    <div class="toggle-wrapper">
+        <div id="showCount">
+          <p class="counts-label">Frequency/Counts</p>
+          <label class="switch_2">
+            <input type="checkbox" id="switch_2">
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
 
 <p>
     Posts containing the word “thesis” tend to peak in April, when senior theses are due. Some of the most common words in such posts are “senior,” “writing,” “work,” “research,” “year,” and “advisor.”
     </p>
 
 <!-- INSERT JP GRAPH -->
+
+<div id="hide">
+  <label for="field_3">Search Word to Analyze</label>
+
+  <input type="text" id="field_3" name="field" value="jp" required
+          size="20">
+
+
+  <button id="search">Search</button>
+</div>
+
+  <!-- Create a div where the graph will take place -->
+  <div id="my_dataviz_3"></div>
+  <div class="toggle-wrapper">
+      <div id="showCount">
+        <p class="counts-label">Frequency/Counts</p>
+        <label class="switch_3">
+          <input type="checkbox" id="switch_3">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
 
 <p>
     Mentions of the word “JP” hit an all-time peak in January of 2021. Some of the most common words used in posts containing the word “JP” include “research,” “due,” “work,” “write,” “thesis,” and “Eisgruber.”
@@ -124,8 +194,29 @@
 
 
 <!-- INSERT FINAL GRAPH -->
+<div id="hide">
+  <label for="field_4">Search Word to Analyze</label>
 
+  <input type="text" id="field_4" name="field" value="final" required
+          size="20">
+
+
+  <button id="search">Search</button>
+</div>
+
+  <!-- Create a div where the graph will take place -->
+  <div id="my_dataviz_4"></div>
+  <div class="toggle-wrapper">
+      <div id="showCount">
+        <p class="counts-label">Frequency/Counts</p>
+        <label class="switch_4">
+          <input type="checkbox" id="switch_4">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
 <!-- WORD CLOUD -->
+
 
 <p>
     Mentions of the word “final” peaked during every finals period.
@@ -142,6 +233,12 @@
 
 </div>
 </body>
+
+<script type="module" src="test.js"></script>
+<script type="module" src="graph_2.js"></script>
+<script type="module" src="graph_3.js"></script>
+<script type="module" src="graph_4.js"></script>
+
 <script type="module" src="script.js"></script>
 <script type="module" src="nav.js"></script>
 

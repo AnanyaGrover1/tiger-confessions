@@ -124,6 +124,29 @@
 
 <!-- graph on posts about lonely -->
 
+<div id="hide">
+  <label for="field">Search Word to Analyze</label>
+
+  <input type="text" id="field" name="field" value="lonely" required
+          size="20">
+
+
+  <button id="search">Search</button>
+</div>
+
+  <!-- Create a div where the graph will take place -->
+
+  <div id="my_dataviz"></div>
+  <div class="toggle-wrapper">
+      <div id="showCount">
+        <p class="counts-label">Frequency/Counts</p>
+        <label class="switch">
+          <input type="checkbox" id="switch">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+
 <!-- Yay, no errors, warnings, or alerts! -->
 
 <p>
@@ -144,6 +167,8 @@
 
 </div>
 </body>
+
+<script type="module" src="test.js"></script>
 <script type="module" src="script.js"></script>
 <script type="module" src="nav.js"></script>
 

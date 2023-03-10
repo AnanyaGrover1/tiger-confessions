@@ -1,7 +1,23 @@
 import { arr } from "./array3.js";
 
+const word_arr = ["bicker", "rush", "sex", "lonely", "covid", "coronavirus", "zoom", "vaccine", "grade", "thesis", "jp", "final", "usg", "lawnparties", "referendum", "israel", "divest", "construction"]
 
-var value = document.getElementById("field").value;
+// "search" bar
+let divs = document.getElementsByClassName("word_graph");
+
+var element_val;
+
+for (let i = 0; i < divs.length; i++) {
+  for (let j = 0; j < word_arr.length; j++) {
+    var element = divs[i].id;
+        if (element == word_arr[j]) {
+          element_val = element
+        }
+      }
+    }
+// default word plotted
+var value = element_val;
+console.log(value)
 
 // "search" bar
 document.getElementById('search').addEventListener("click", function () {
@@ -39,7 +55,9 @@ var margin = {top: 30, right: 30, bottom: 60, left: 60},
 
 // append the svg object to the body of the page
 // var svg = d3.select("#my_dataviz")
+
 var svg = d3.select("#my_dataviz")
+console.log(graph_name)
   .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -119,7 +137,7 @@ d3.csv(chartType,
 // default
 
 
-update('tc_data_for_web_fractions.csv', value)
+// update('tc_data_for_web_fractions.csv', "hi")
 
 
 // // default word plotted
@@ -127,3 +145,17 @@ update('tc_data_for_web_fractions.csv', value)
 
 // // "search" bar
 // let divs = document.getElementsByClassName("word_graph");
+
+for (let i = 0; i < divs.length; i++) {
+  for (let j = 0; j < word_arr.length; j++) {
+    var element = divs[i].id;
+        if (element == word_arr[j]) {
+          const val = element
+          if(document.getElementById('switch').checked){
+            update('graphs/tc_data_for_web_with_dates.csv', val)
+        } else {
+          update('graphs/tc_data_for_web_fractions.csv', val)
+        }
+      }
+    }
+  }

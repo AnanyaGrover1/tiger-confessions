@@ -1,11 +1,11 @@
 import { arr } from "./array3.js";
 
 
-var value = document.getElementById("field").value;
+var value = document.getElementById("field_3").value;
 
 // "search" bar
 document.getElementById('search').addEventListener("click", function () {
-    const val = document.getElementById('field').value;
+    const val = document.getElementById('field_3').value;
 
     // if val is in array of words, update the svg accordingly
     // can't update both the word and the freq or counts parameter
@@ -14,7 +14,7 @@ document.getElementById('search').addEventListener("click", function () {
     if (arr.indexOf(val) !== -1) {
         value = val;
 
-        document.getElementById("switch").checked = false;
+        document.getElementById("switch_3").checked = false;
         update('graphs/tc_data_for_web_with_dates.csv', value)
     } else {
         alert("this word is not in the database!")
@@ -24,8 +24,8 @@ document.getElementById('search').addEventListener("click", function () {
 
 
 // switching between freq and count graphs
-document.getElementById('switch').addEventListener("click", function() {
-        if(document.getElementById('switch').checked){
+document.getElementById('switch_3').addEventListener("click", function() {
+        if(document.getElementById('switch_3').checked){
             update('graphs/tc_data_for_web_with_dates.csv', value)
         } else {
           update('graphs/tc_data_for_web_fractions.csv', value)
@@ -39,7 +39,7 @@ var margin = {top: 30, right: 30, bottom: 60, left: 60},
 
 // append the svg object to the body of the page
 // var svg = d3.select("#my_dataviz")
-var svg = d3.select("#my_dataviz")
+var svg = d3.select("#my_dataviz_3")
   .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -120,10 +120,3 @@ d3.csv(chartType,
 
 
 update('tc_data_for_web_fractions.csv', value)
-
-
-// // default word plotted
-// const word_arr = ["bicker", "rush", "sex", "lonely", "covid", "coronavirus", "zoom", "vaccine", "grade", "thesis", "jp", "final", "usg", "lawnparties", "referendum", "israel", "divest", "construction"]
-
-// // "search" bar
-// let divs = document.getElementsByClassName("word_graph");

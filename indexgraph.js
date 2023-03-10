@@ -1,7 +1,7 @@
 import { arr } from "./array3.js";
 
-
-var value = document.getElementById("field").value;
+// default word plotted
+var value = "hi";
 
 // "search" bar
 document.getElementById('search').addEventListener("click", function () {
@@ -21,14 +21,12 @@ document.getElementById('search').addEventListener("click", function () {
     }
 })
 
-
-
 // switching between freq and count graphs
 document.getElementById('switch').addEventListener("click", function() {
         if(document.getElementById('switch').checked){
-            update('graphs/tc_data_for_web_with_dates.csv', value)
+            update('tc_data_for_web_with_dates.csv', value)
         } else {
-          update('graphs/tc_data_for_web_fractions.csv', value)
+            update('tc_data_for_web_fractions.csv', value)
         }
       });
 
@@ -38,7 +36,6 @@ var margin = {top: 30, right: 30, bottom: 60, left: 60},
     height = 400 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
-// var svg = d3.select("#my_dataviz")
 var svg = d3.select("#my_dataviz")
   .append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -87,6 +84,7 @@ d3.csv(chartType,
   function(data) {
 
 
+
 // update x axis
     x.domain(d3.extent(data, function(d) { return +d.month; }))
     xAxis.call(d3.axisBottom(x));
@@ -99,15 +97,12 @@ d3.csv(chartType,
     // Add the line
     svg.append("path")
       .datum(data)
-      .transition().duration(1000)
       .attr("fill", "none")
       .attr("stroke", "brown")
       .attr("stroke-width", 1.5)
       .attr("d", d3.line()
         .x(function(d) { return x(d.month) })
-        // .y0(height)
         .y(function(d) { return y(d.value) })
-
         )
 
 
@@ -117,13 +112,4 @@ d3.csv(chartType,
 
 
 // default
-
-
-update('tc_data_for_web_fractions.csv', value)
-
-
-// // default word plotted
-// const word_arr = ["bicker", "rush", "sex", "lonely", "covid", "coronavirus", "zoom", "vaccine", "grade", "thesis", "jp", "final", "usg", "lawnparties", "referendum", "israel", "divest", "construction"]
-
-// // "search" bar
-// let divs = document.getElementsByClassName("word_graph");
+update('tc_data_for_web_fractions.csv', "hi")

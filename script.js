@@ -1,147 +1,88 @@
 // word cloud data
+let scale1 = 2
+let scale2 = 12
 let wordCloudDict = {
-    "1880": 
+    "1":
     [
-        { word: "bookbinder", size: 22.8/2 },
-        { word: "grocers", size: 28.9/2 },
-        { word: "tailor", size: 16.9/2 },
-        { word: "wholesale", size: 27/2 },
-        { word: "Bickham", size: 28.9/2 },
-        { word: "Tobacco", size: 23.3/2 },
-        { word: "Gentlemen", size: 17.8/2 },
+        { word: "construction", size: 60/scale1 },
+        { word: "like", size: 29/scale1 },
+        { word: "going", size: 19 /scale1},
+        { word: "brother", size: 17 /scale1},
+        { word: "get", size: 16/scale1 },
+        { word: "also", size: 13 /scale1},
+        { word: "people", size: 13 /scale1},
+        { word: "i'm", size: 12 /scale1},
+        { word: "princeton", size: 12 /scale1},
+        { word: "w", size: 12/scale1 },
+        { word: "one", size: 11/scale1 },
+        { word: "would", size: 11/scale1 },
+        { word: "campus", size: 11 /scale1},
+        { word: "companies", size: 11 /scale1},
+        { word: "im", size: 10/scale1 },
+        { word: "use", size: 10 /scale1},
+        { word: "even", size: 10 /scale1},
+        { word: "divestment", size: 10 /scale1},
+        { word: "could", size: 10 /scale1},
+        { word: "makes", size: 10 /scale1},
+        { word: "see", size: 10/scale1 },
+        { word: "every", size: 10 /scale1},
+        { word: "noise", size: 10/scale1},
+        { word: "time", size: 10 /scale1},
+        { word: "much", size: 10 /scale1},
+        { word: "year", size: 9 /scale1},
+        { word: "new", size: 9 /scale1},
+        { word: "know", size: 9 /scale1},
+        { word: "room", size: 8 /scale1},
+        { word: "fossil", size: 8 /scale1},
+        { word: "still", size: 8/scale1},
+        { word: "say", size: 8 /scale1},
+        { word: "engage", size: 8 /scale1},
+        { word: "core", size: 8 /scale1},
+        { word: "way", size: 8/scale1 },
+        { word: "something", size: 8 /scale1},
+        { word: "really", size: 8/scale1 },
+        { word: "first", size: 8 /scale1},
+
     ],
-    "1890": [
-        { word: "meals", size: 22.6/2 },
-        { word: "advertisments", size: 22.3/2 },
-        { word: "lunches", size: 24.3/2 },
-        { word: "furniture", size: 18.4/2 },
-        { word: "studying", size: 16.6/2 },
-        { word: "drug", size: 17.3/2 },
-        { word: "bicycle", size: 16.2/2 },
-    ],
-    "1900": [
-        { word: "oclock", size: 22.8/2 },
-        { word: "rehearsal", size: 22/2 },
-        { word: "Triangle", size: 18.5/2 },
-        { word: "Bric-a-brac", size: 16.6/2 },
-        { word: "Casino", size: 16/2 },
-        { word: "performance", size: 15.7/2 },
-        { word: "Blair", size: 15.8/2 },
-    ],
-    "1910": [
-        { word: "Associated", size: 21.9/2 },
-        { word: "troops", size: 24.1/2 },
-        { word: "Roosevelt", size: 21.2/2 },
-        { word: "military", size: 21.2/2 },
-        { word: "war", size: 17.7/2 },
-        { word: "corps", size: 21.2/2 },
-        { word: "training", size: 15/2 },
-        { word: "rowing", size: 13/2 },
-        { word: "lake", size: 13.4/2 },
-    ],
-    "1920": [
-        { word: "Commons", size: 16.6/1.2 },
-        { word: "Speakers", size: 13.6/1.2 },
-        { word: "yearlings", size: 12.9/1.2 },
-        { word: "orchestra", size: 12.4/1.2 },
-        { word: "prom", size: 12.3/1.2 },
-        { word: "arts", size: 13.7/1.2 },
-    ],
-    "1930": [
-        { word: "gold", size: 14.3/2 },
-        { word: "Roosevelt", size: 18.1/2 },
-        { word: "McCarter", size: 16.6/2 },
-        { word: "geology", size: 12.4/2 },
-        { word: "Crisler", size: 24.9/2 },
-        { word: "intramural", size: 14.3/2 },
-        { word: "squash", size: 16.4/2 }
-    ],
-    "1940": [
-        { word: "wartime", size: 32.1/2 },
-        { word: "civilian", size: 30.4/2 },
-        { word: "postwar", size: 26.4/2 },
-        { word: "marine", size: 27.3/2 },
-        { word: "SPIA", size: 24.4/2 },
-        { word: "engineering", size: 13.5/2 },
-        { word: "radio", size: 13.2/2 },
-        { word: "WPRU", size: 21.9/2 },
-    ],
-    "1950": [
-        { word: "Eisenhower", size: 23.3/2 },
-        { word: "Communist", size: 13.9/2 },
-        { word: "Bicker", size: 13.6/2 },
-        { word: "frosh", size: 15.5/2 },
-        { word: "soph", size: 14.4/2 },
-        { word: "prayer", size: 21.9/2 },
-        { word: "worship", size: 20.2/2 },
-        { word: "Episcopal", size: 19/2 },
-    ],
-    "1960": [
-        { word: "coeducation", size: 19/2 },
-        { word: "Negro", size: 22.9/2 },
-        { word: "UGC", size: 26.5/2 },
-        { word: "ICC", size: 19/2 },
-        { word: "Vietnam", size: 18.8/2 },
-        { word: "SDS", size: 25.7/2 },
-        { word: "Wilcox", size: 18.9/2 },
-    ],
-    "1970": [
-        { word: "Nixon", size: 18.6/2 },
-        { word: "ROTC", size: 17.3/2 },
-        { word: "energy", size: 16.5/2 },
-        { word: "oil", size: 15.5/2 },
-        { word: "tution", size: 15.5/2 },
-        { word: "costs", size: 15.8/2 },
-        { word: "budget", size: 13.6/2 },
-        { word: "Jones", size: 13/2 },
-        { word: "Jadwin", size: 15.8/2 },
-    ],
-    "1980": [
-        { word: "Soviet", size: 17.5/2 },
-        { word: "Reagan", size: 27.9/2 },
-        { word: "nuclear", size: 17.8/2 },
-        { word: "Butler", size: 16.3/2 },
-        { word: "residential", size: 13.3/2 },
-        { word: "harassment", size: 15.4/2 },
-        { word: "USG", size: 14/2 }, 
-        { word: "forum", size: 13.2/2 },
-        { word: "Frank", size: 14.8/2 },
-        { word: "computer", size: 12.2/2 },
-    ],
-    "1990": [
-        { word: "Clinton", size: 23.5/2 },
-        { word: "softball", size: 15.3/2 },
-        { word: "volleyball", size: 14.9/2 },
-        { word: "hockey", size: 14.9/2 },
-        { word: "environmental", size: 14.1/2 },
-        { word: "AIDS", size: 13.8/2 },
-        { word: "television", size: 12.9/2 },
-        { word: "machine", size: 17.3/2 },
-    ],
-    "2000": [
-        { word: "Iraq", size: 17.8/2.5 },
-        { word: "Frist", size: 18.1/2.5 },
-        { word: "Bush", size: 14.4/2.5 },
-        { word: "email", size: 13.7/2.5},
-        { word: "drinking", size: 13.5/2.5 },
-        { word: "aid", size: 10.5/2.5 },
-        { word: "Tilghman", size: 18/2.5 },
-        { word: "guys", size: 12.9/2.5 },
-        { word: "girls", size: 12.9/2.5 },
-    ],
-    // sizes wrong
-    "2010": [
-        { word: "Trump", size: 21.4/2 },
-        { word: "Obama", size: 13.3/2 },
-        { word: "justice", size: 13.2/2 },
-        { word: "Asian", size: 14.3/2 },
-        { word: "Facebook", size: 14.9/2 },
-        { word: "online", size: 12.1/2 },
-        { word: "mental", size: 15.9/2 },
-        { word: "referendum", size: 14.1/2 },
-        { word: "gender", size: 14.4/2 },
-        { word: "diversity", size: 13.1/2 },
-        { word: "sexual", size: 14.6/2 },
+    "2": [
+        { word: "final", size: 642/scale2 },
+        { word: "like", size: 209 /scale2},
+        { word: "class", size: 163 /scale2},
+        { word: "get", size: 153 /scale2},
+        { word: "people", size: 153 /scale2},
+        { word: "im", size: 146 /scale2},
+        { word: "know", size: 138 /scale2},
+        { word: "3", size: 136/scale2 },
+        { word: "grade", size: 132 /scale2},
+        { word: "even", size: 120 /scale2},
+        { word: "really", size: 118 /scale2},
+        { word: "one", size: 115/scale2 },
+        { word: "time", size: 110 /scale2},
+        { word: "would", size: 108/scale2 },
+        { word: "dont", size: 105/scale2 },
+        { word: "think", size: 98 /scale2},
+        { word: "exam", size: 91 /scale2},
+        { word: "want", size: 90/scale2 },
+        { word: "make", size: 87/scale2 },
+        { word: "i'm", size: 84 /scale2},
+        { word: "going", size: 84/scale2 },
+        { word: "us", size: 84/scale2 },
+        { word: "students", size: 81/scale2 },
+        { word: "could", size: 80/scale2 },
+        { word: "semester", size: 80/scale2 },
+        { word: "anyone", size: 78 /scale2},
+        { word: "much", size: 77/scale2 },
+        { word: "got", size: 76/scale2},
+        { word: "grades", size: 76 /scale2},
+        { word: "feel", size: 75/scale2 },
+        { word: "princeton", size: 74/scale2 },
+        { word: "take", size: 73/scale2},
+        { word: "classes", size: 71/scale2 },
+        { word: "well", size: 70/scale2 },
+        { word: "also", size: 69/scale2 },
+        { word: "go", size: 69/scale2 },
+        { word: "away", size: 63 /scale2},
+
     ]
 }
 
@@ -271,14 +212,14 @@ d3.csv("https://assets.dailyprincetonian.com/projects.dailyprincetonian.com/140-
         // Create new data with the selection?
         let dataFilter = data.map(function (d) { return { time: d.timedecade, value: d[selectedGroup] } })
 
-    
+
         if(typeof dataFilter[0]['value'] == 'undefined') {
             d3.select("#" + selectedDecade).select(".error-msg")
             .text("\“" + selectedGroup + "\” was not included in our analysis because it was either not used frequently enough to be included in our analysis or was removed during data cleaning. If you're interested in seeing its usage over time, you can use the Princeton University Library Archive explorer.")
             .style("color", myColor)
             return false;
         }
-       
+
         d3.select("#" + selectedDecade).select(".error-msg")
         .text("")
 
@@ -344,7 +285,7 @@ d3.csv("https://assets.dailyprincetonian.com/projects.dailyprincetonian.com/140-
         let element = d3.select("#d" + decade)
                         .select(".word-cloud")
                         .selectAll(".selectButton")
-                        .filter(function(){ 
+                        .filter(function(){
                             return d3.select(this).text() == word
                         })
         update(element.node(), word.toLowerCase(), "d" + decade)
