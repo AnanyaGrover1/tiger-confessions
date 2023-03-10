@@ -15,7 +15,7 @@ document.getElementById('search').addEventListener("click", function () {
         value = val;
 
         document.getElementById("switch").checked = false;
-        update('graphs/tc_data_for_web_with_dates.csv', value)
+        update('tc_data_for_web_with_dates.csv', value)
     } else {
         alert("this word is not in the database!")
     }
@@ -31,18 +31,21 @@ document.getElementById('switch').addEventListener("click", function() {
       });
 
 // margins for the graph
-var margin = {top: 30, right: 30, bottom: 60, left: 60},
+var margin = {top: 30, right: 30, bottom: 100, left: 15},
     width = 1200 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
   .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-  .append("g")
+    // .attr("width", width + margin.left + margin.right)
+    // .attr("height", height + margin.top + margin.bottom)
+    .attr("viewBox", `-${margin.left} -${margin.top} ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+    .attr("preserveAspectRatio", "xMinYMin meet")
+    .append("g")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
+
 
 // initialize x and y axes
 var x = d3.scaleTime()

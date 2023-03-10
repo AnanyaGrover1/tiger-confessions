@@ -3,23 +3,22 @@
 
 <head>
   <!-- usually this can just be the headline, but check in -->
-  <title>Tiger Confessions Project</title>
+  <title>The Rise and Fall of Tiger Confessions</title>
   <!--
         CHANGE THIS! "preview-img.png" defines what the preview image will be for
         links and social media, so be sure to change this to whatever the
          dominant media will be
     -->
   <meta property="og:image"
-    content="https://assets.dailyprincetonian.com/projects.dailyprincetonian.com/140-years-prince-history/dommedia-01.png">
+  content="tigerconfessions-1.png">>
 
   <!--
         CHANGE THIS! Make the content something meaningful to the article
         (reach out to editor for suggestions if needed)
     -->
   <meta property=“og:description”
-    content="At The Daily Princetonian, we’re used to focusing on the present — reporting on stories that unfold as we write.
+  content="The 'Prince' looked at topics of discussion on the anonymous Facebook group TigerConfessions from October 2019 to mid-January 2023." />
 
-  With this project, we at the ‘Prince’, the second-oldest college newspaper in the country, took a step back. Leveraging data from the The Daily Princetonian Larry Dupraz Archives, kindly shared with us by Mudd Library, we immersed ourselves in decades worth of print publications in the hope of better understanding the journey the ‘Prince’ and the University have been on over the past 140 years." />
 
   <!-- defines standard character set—useful for ensuring curly quotes
       aren't corrupted by different encodings -->
@@ -69,20 +68,36 @@
 
     <nav id="top-nav">
         <a class="nav-brand" href="index.html">
-          THE DAILY PRINCETONIAN <span class="project-name"> | Tiger Confessions Data Project</span>
+          THE DAILY PRINCETONIAN <span class="project-name"> | The Rise and Fall of Tiger Confessions</span>
         </a>
         <span class="menu-icon" onclick="expand()">&#9776;</span>
-        <div class="nav-links">
-          <a href="/social.html">Social</a>
-          <a href="/mentalhealth.html">Mental Health</a>
-          <a href="/covid.html">COVID-19</a>
-          <a href="academics.html">Academics</a>
-          <a href="/campuslife.html">Campus Issues</a>
-          <a href="/methodology.html">Methodology</a>
-        </div>
-      </nav>
+    <div class="nav-links">
+      <a href="social.html" target="_self">Social</a>
+      <a href="mentalhealth.html" target="_self">Mental Health</a>
+      <a href="covid.html" target="_self">COVID-19</a>
+      <a href="academics.html" target="_self">Academics</a>
+      <a href="campuslife.html" target="_self">Campus Life</a>
+      <a href="methodology.html" target="_self">Methodology</a>
+    </div>
+  </nav>
+
+  <script>
+    function expand() {
+    const topNav = document.getElementById("top-nav");
+    if (topNav.className.includes("expand")) {
+      topNav.classList.remove("expand");
+    } else topNav.classList.add("expand");
+  }
+
+  var links = document.links;
+  for (var i = 0; i < links.length; i++) {
+       links[i].target = "_self";
+  }
+
+  </script>
 
     <div id="top" style="height: 1px; position: relative; top: -35px"></div>
+
 
 
 <!-- Cover image & caption -->
@@ -90,7 +105,7 @@
 
 <div class="titleText whiteHeaderText" style="padding-left: 5%; padding-bottom: 0;">
         <h1 class="title" style="padding-top: 70px;">MENTAL HEALTH </h1>
-        <h2 class="subtitle" style="margin-top: -10px;"> “stressed”, “depressed”, “anxious”, “scared”, and “lonely”
+        <h2 class="subtitle" style="margin-top: -10px;"> “Stressed,” “depressed,” “anxious,” “scared,” and “lonely”
         </h2>
 
 
@@ -119,7 +134,7 @@
     Mentions of the word “anxious” peaked during 2020 Fall Term final exams. 8.5 percent of the 165 posts containing the word “anxious” also contain the word “depressed”, 7.3 percent contain the word “school”, 17.6 percent contain the word “friends”, and 14.3 percent contain some variation of the word “work” including “schoolwork”, “working” or “worked.”
     </p>
     <p>
-    The raw number of posts containing the word “scared” was highest during Spring of 2020, at the beginning of the pandemic and initial lockdown. Posting was generally higher during this time though—the frequency the word “scared” has remained at around 1.2 percent.
+    The raw number of posts containing the word “scared” was highest during Spring of 2020, at the beginning of the pandemic and initial lockdown. Posting was generally higher during this time though — the frequency the word “scared” has remained at around 1.2 percent.
     </p>
 
 <!-- graph on posts about lonely -->
@@ -135,7 +150,7 @@
 </div>
 
   <!-- Create a div where the graph will take place -->
-
+  <h3>"lonely"</h3>
   <div id="my_dataviz"></div>
   <div class="toggle-wrapper">
       <div id="showCount">

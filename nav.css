@@ -24,7 +24,7 @@
   #top-nav a:focus {
     /* font-weight: 600; */ /* Become bold on hover of nav link */
     /* text-decoration: underline; Underline on hover of nav link */
-    color: #FB4F59;
+    color: #A53133;
     transition: ease 0.5s;
 
   }
@@ -54,7 +54,7 @@
     padding: 5px 8px 5px 8px;
     border-radius: 8px;
 
-    background-color: #FB4F59;
+    background-color: #A53133;
 
 
   }

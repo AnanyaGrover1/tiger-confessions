@@ -85,7 +85,7 @@
   text-align: center;
   font-family: franklin-gothic-urw-cond;
   font-size: 50px;
-  color: #c24532;
+  color: #A53133;
 }
 
 .intro-text p{
@@ -93,7 +93,7 @@
 }
 
 .intro-text a{
-  color: #c24532;
+  color: #A53133;
   text-decoration: none;
 }
 
@@ -106,7 +106,7 @@
 }
 
 .decade-text a{
-  color: #c24532;
+  color: #A53133;
   text-decoration: none;
 }
 
@@ -190,7 +190,7 @@ opacity: 1;
 .selected{
   opacity: 1;
   font-weight: bold;
- fill: #c24532 !important;
+ fill: #A53133 !important;
 }
 .graph-block{
   display: flex;
@@ -204,7 +204,7 @@ opacity: 1;
 }
 
 .chart-header{
-  color: #c24532 !important;
+  color: #A53133 !important;
   font-family: franklin-gothic-urw, sans-serif;
   padding-bottom: 5px;
 }
@@ -265,7 +265,7 @@ path.domain{
 .active{
   font-weight: bold;
   font-size: large;
-  color: #c24532 !important;
+  color: #A53133 !important;
   opacity: 100% !important;
 }
 
@@ -344,6 +344,51 @@ browser window really skinny */
       flex-direction: column;
     }
 
+    .d3chart{
+      width: 50%;
+    }
+
+    #my_dataviz svg {
+      min-width: 200px;
+      min-height: 150px;
+    }
+
+    #my_dataviz_2 svg {
+      min-width: 200px;
+      min-height: 150px;
+    }
+
+    #my_dataviz_3 svg {
+      min-width: 200px;
+      min-height: 150px;
+    }
+
+    #my_dataviz_4 svg {
+      min-width: 200px;
+      min-height: 150px;
+    }
+
+    #my_dataviz_5 svg {
+      min-width: 200px;
+      min-height: 150px;
+    }
+
+    #my_dataviz_6 svg {
+      min-width: 200px;
+      min-height: 150px;
+    }
+
+    h2{
+      padding-top:0.5em;
+      font-size:1em !important;
+    }
+
+  }
+
+  @media screen and (max-width: 500px) {
+    h2{
+      font-size:1em;
+    }
   }
 
 .intro-text{
@@ -384,7 +429,7 @@ browser window really skinny */
 
     font-size: 2vw;
 
-    color: #c24532 !important;
+    color: #A53133 !important;
     font-style: italic;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 

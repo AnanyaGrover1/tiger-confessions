@@ -10,16 +10,15 @@
          dominant media will be
     -->
   <meta property="og:image"
-    content="https://assets.dailyprincetonian.com/projects.dailyprincetonian.com/140-years-prince-history/dommedia-01.png">
+    content="tigerconfessions-1.png">>
 
   <!--
         CHANGE THIS! Make the content something meaningful to the article
         (reach out to editor for suggestions if needed)
     -->
   <meta property=“og:description”
-    content="At The Daily Princetonian, we’re used to focusing on the present — reporting on stories that unfold as we write.
+  content="The 'Prince' looked at topics of discussion on the anonymous Facebook group TigerConfessions from October 2019 to mid-January 2023." />
 
-  With this project, we at the ‘Prince’, the second-oldest college newspaper in the country, took a step back. Leveraging data from the The Daily Princetonian Larry Dupraz Archives, kindly shared with us by Mudd Library, we immersed ourselves in decades worth of print publications in the hope of better understanding the journey the ‘Prince’ and the University have been on over the past 140 years." />
 
   <!-- defines standard character set—useful for ensuring curly quotes
       aren't corrupted by different encodings -->
@@ -72,25 +71,39 @@
           THE DAILY PRINCETONIAN <span class="project-name"> | The Rise and Fall of Tiger Confessions</span>
         </a>
         <span class="menu-icon" onclick="expand()">&#9776;</span>
-        <div class="nav-links">
-          <a href="/social.html">Social</a>
-          <a href="/mentalhealth.html">Mental Health</a>
-          <a href="/covid.html">COVID-19</a>
-          <a href="academics.html">Academics</a>
-          <a href="/campuslife.html">Campus Issues</a>
-          <a href="/methodology.html">Methodology</a>
-        </div>
-      </nav>
+    <div class="nav-links">
+      <a href="social.html" target="_self">Social</a>
+      <a href="mentalhealth.html" target="_self">Mental Health</a>
+      <a href="covid.html" target="_self">COVID-19</a>
+      <a href="academics.html" target="_self">Academics</a>
+      <a href="campuslife.html" target="_self">Campus Life</a>
+      <a href="methodology.html" target="_self">Methodology</a>
+    </div>
+  </nav>
 
-    <div id="top" style="height: 1px; position: relative; top: -35px"></div>
+  <script>
+    function expand() {
+    const topNav = document.getElementById("top-nav");
+    if (topNav.className.includes("expand")) {
+      topNav.classList.remove("expand");
+    } else topNav.classList.add("expand");
+  }
 
+  var links = document.links;
+  for (var i = 0; i < links.length; i++) {
+       links[i].target = "_self";
+  }
+
+  </script>
+
+<div id="top" style="height: 1px; position: relative; top: -35px"></div>
 
 <!-- Cover image & caption -->
 
 
 <div class="titleText whiteHeaderText" style="padding-left: 5%; padding-bottom: 0;">
         <h1 class="title" style="padding-top: 70px;">SOCIAL </h1>
-        <h2 class="subtitle" style="margin-top: -10px;"> Eating Clubs, Drugs and Alcohol, Sex
+        <h2 class="subtitle" style="margin-top: -10px;"> Eating clubs, drugs and alcohol, sex
         </h2>
 
 
@@ -119,6 +132,7 @@ Posts about Charter Club spiked in January 2020. The majority of Charter-related
 </p>
 
 <!-- graph on posts about bicker -->
+<h3>"bicker"</h3>
 
 
     <div id="hide">
@@ -164,6 +178,8 @@ Posts about Charter Club spiked in January 2020. The majority of Charter-related
   <button id="search">Search</button>
 </div>
 
+<h3>"rush"</h3>
+
   <!-- Create a div where the graph will take place -->
   <div id="my_dataviz_3"></div>
   <div class="toggle-wrapper">
@@ -180,13 +196,10 @@ Posts about Charter Club spiked in January 2020. The majority of Charter-related
 
 
 <p>
-    Posts containing “rush” increase generally towards the end of summer just before sorority and fraternity rush, which typically takes place towards the beginning of the fall semester. Fraternities and sororities are not officially recognized by the University. The most significant peak in posts about rush was a discussion about race and inclusion in fraternities and sororities in the summer of 2020, as part of a broader discussion about race following the murder of George Floyd as it related to racism during the sorority rush process in summer 2020. Of all 48 posts mentioning “rush,” “rushing” or “rushed” in August 2020, about 14.6 percent mentioned “racism,” “racist,” or “racially”; 25 percent mentioned “diverse” or “diversity”; 25 percent mentioned “WOC” (an acronym for “women of color”); and about 16.7 percent mentioned “white.”
+    Posts containing “rush” increase generally towards the end of summer just before sorority and fraternity rush, which typically takes place towards the beginning of the fall semester. Fraternities and sororities are not officially recognized by the University. The most significant peak in posts about rush was a discussion about race and inclusion in fraternities and sororities in the summer of 2020, as part of a broader discussion about race following the murder of George Floyd. Of all 48 posts mentioning “rush,” “rushing” or “rushed” in August 2020, about 14.6 percent mentioned “racism,” “racist,” or “racially”; 25 percent mentioned “diverse” or “diversity”; 25 percent mentioned “WOC” (an acronym for “women of color”); and about 16.7 percent mentioned “white.”
     </p>
 
     <div class = "confession">
-        <div class = "post_date">
-            <span class="post-date svelte-1x4mzm4">APRIL 2</span>
-        </div>
         <div class = "post_content">
             <p> is it weird that as a woc for one srat all of my individual rush chats have been with a person of my race it was nice at first but it felt like less of a coincidence and i felt hypervisible and tokenized
               </p>
@@ -195,9 +208,6 @@ Posts about Charter Club spiked in January 2020. The majority of Charter-related
       <br>
 
       <div class = "confession">
-        <div class = "post_date">
-            <span class="post-date svelte-1x4mzm4">APRIL 2</span>
-        </div>
         <div class = "post_content">
             <p> was in a sorority last year and had to sit by and listen to a few of my white sisters talk about how they would not ever date poc this is also a group of girls that has fetishized black men especially athletes i got up to leave after a few minutes of that only one of the girls later texted me and asked if i was fine because i left so abruptly after i told her she was confused because i’m white why would i be hurt</p>
         </div>
@@ -237,7 +247,7 @@ Some students used TigerConfessions to discuss their alcohol use. Overall, .35 p
 
   <button id="search">Search</button>
 </div>
-
+<h3>"sex"</h3>
   <!-- Create a div where the graph will take place -->
 
   <div id="my_dataviz_2"></div>
@@ -261,9 +271,6 @@ Some students used TigerConfessions to discuss their alcohol use. Overall, .35 p
     </p>
 
     <div class = "confession">
-        <div class = "post_date">
-            <span class="post-date svelte-1x4mzm4">APRIL 2</span>
-        </div>
         <div class = "post_content">
             <p> i walked in on the whitman orgy and it was just a bunch of people licking knees and feeling smooth toes
               </p>

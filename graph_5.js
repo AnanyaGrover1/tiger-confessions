@@ -33,7 +33,7 @@ document.getElementById('switch_5').addEventListener("click", function() {
       });
 
 // margins for the graph
-var margin = {top: 30, right: 30, bottom: 60, left: 60},
+var margin = {top: 30, right: 30, bottom: 100, left: 15},
     width = 1200 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
 
@@ -41,8 +41,8 @@ var margin = {top: 30, right: 30, bottom: 60, left: 60},
 // var svg = d3.select("#my_dataviz")
 var svg = d3.select("#my_dataviz_5")
   .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+  .attr("viewBox", `-${margin.left} -${margin.top} ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+  .attr("preserveAspectRatio", "xMinYMin meet")
   .append("g")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");

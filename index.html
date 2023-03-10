@@ -10,16 +10,14 @@
          dominant media will be
     -->
   <meta property="og:image"
-    content="https://assets.dailyprincetonian.com/projects.dailyprincetonian.com/140-years-prince-history/dommedia-01.png">
+    content="tigerconfessions-1.png">
 
   <!--
         CHANGE THIS! Make the content something meaningful to the article
         (reach out to editor for suggestions if needed)
     -->
   <meta property=“og:description”
-    content="At The Daily Princetonian, we’re used to focusing on the present — reporting on stories that unfold as we write.
-
-  With this project, we at the ‘Prince’, the second-oldest college newspaper in the country, took a step back. Leveraging data from the The Daily Princetonian Larry Dupraz Archives, kindly shared with us by Mudd Library, we immersed ourselves in decades worth of print publications in the hope of better understanding the journey the ‘Prince’ and the University have been on over the past 140 years." />
+    content="The 'Prince' looked at topics of discussion on the anonymous Facebook group TigerConfessions from October 2019 to mid-January 2023." />
 
   <!-- defines standard character set—useful for ensuring curly quotes
       aren't corrupted by different encodings -->
@@ -104,14 +102,29 @@
     </a>
     <span class="menu-icon" onclick="expand()">&#9776;</span>
     <div class="nav-links">
-      <a href="social.html">Social</a>
-      <a href="mentalhealth.html">Mental Health</a>
-      <a href="covid.html">COVID-19</a>
-      <a href="academics.html">Academics</a>
-      <a href="campuslife.html">Campus Issues</a>
-      <a href="methodology.html">Methodology</a>
+      <a href="social.html" target="_self">Social</a>
+      <a href="mentalhealth.html" target="_self">Mental Health</a>
+      <a href="covid.html" target="_self">COVID-19</a>
+      <a href="academics.html" target="_self">Academics</a>
+      <a href="campuslife.html" target="_self">Campus Life</a>
+      <a href="methodology.html" target="_self">Methodology</a>
     </div>
   </nav>
+
+  <script>
+    function expand() {
+    const topNav = document.getElementById("top-nav");
+    if (topNav.className.includes("expand")) {
+      topNav.classList.remove("expand");
+    } else topNav.classList.add("expand");
+  }
+
+  var links = document.links;
+  for (var i = 0; i < links.length; i++) {
+       links[i].target = "_self";
+  }
+
+  </script>
 
 <div id="top" style="height: 1px; position: relative; top: -35px"></div>
 
@@ -124,12 +137,15 @@
     <div class="headline">
       <p class="overline"><strong>PROJECTS </strong><br></p>
       <h1>The Rise and Fall <br> of Tiger Confessions</h1>
-      <p class="underline"><em>analyzed by The Daily Princetonian data team</em></p>
-      <p class="byline">By Anika Maskara, Suthi Navaratnam-Tomayko, and Grace Kim
+      <p class="byline"><em>By Anika Maskara, Suthi Navaratnam-Tomayko, and Grace Kim</em></p>
+      <p class="byline">Web Design by Ananya Grover
       </p>
+
     </div>
 
   </div>
+
+  <iframe style='width: 80%; display: block;margin: 0 auto; height: 100px; border: none; position: relative; z-index: 1;' allowtransparency allow="clipboard-read; clipboard-write" src="https://narrations.ad-auris.com/widget/the-daily-princetonian/the-rise-and-fall-of-tigerconfessions"></iframe>
 
   <div class="intro-text">
     <h1>Introduction</h1>
@@ -146,9 +162,7 @@
 
     <div class = "confession_list">
     <div class = "confession">
-      <div class = "post_date">
-          <span class="post-date svelte-1x4mzm4">APRIL 2</span>
-      </div>
+
       <div class = "post_content">
           <p> will i get suspended for mat202
             </p>
@@ -157,9 +171,7 @@
     <br>
 
     <div class = "confession">
-      <div class = "post_date">
-          <span class="post-date svelte-1x4mzm4">APRIL 2</span>
-      </div>
+
       <div class = "post_content">
           <p> mat202 reported me for cheating when i didn’t copy any answers and i am terrified
           </p>
@@ -168,9 +180,6 @@
     <br>
 
     <div class = "confession">
-      <div class = "post_date">
-          <span class="post-date svelte-1x4mzm4">APRIL 2</span>
-      </div>
       <div class = "post_content">
           <p> i was investigated by mat202 i didn’t cheat i worked with a group of other mat202 students and one of the answers i discussed with them they apparently got from an online source … i didn’t feel i belonged at princeton after being belittled attacked and threatened for over an hour today by odus
             </p>
@@ -179,9 +188,6 @@
     <br>
 
     <div class = "confession">
-      <div class = "post_date">
-          <span class="post-date svelte-1x4mzm4">APRIL 2</span>
-      </div>
       <div class = "post_content">
           <p> i had a nightmare when i went to sleep after reading the scary as fuck announcement last night and ever since i woke up ive been frozen in bed unable to move or get up i tried to eat but i cant because i feel vomity.</p>
       </div>
@@ -223,9 +229,12 @@
 
 
     <br>
+    <p>Search words in the text box below and see their frequency and counts over time in all TigerConfessions posts.
+
+    </p>
 
     <div>
-      <label for="field">Search Word to Analyze</label>
+
       </div>
       <input type="text" id="field" name="field" required
               size="20">
@@ -234,6 +243,7 @@
       <button id="search">Search</button>
 
       <!-- Create a div where the graph will take place -->
+      <div class="d3chart">
       <div id="my_dataviz"></div>
       <div class="toggle-wrapper">
           <div id="showCount">
@@ -244,26 +254,38 @@
             </label>
           </div>
       </div>
+      </div>
 
 
     <div><h2 style = "text-align: center;">***</h2></div>
     <br>
+    <div style="text-align: center;">
     <p>
-      <em>Anika Maskara is a Head Web Design and Development Editor and a Staff Data Reporter focused on digital
-        storytelling and interactive visualization. She is a senior and can be reached at amaskara@princeton.edu or on
-        Instagram @anikamaskara.</em>
+      <em>Suthi Navaratnam-Tomayko is an assistant editor for the Data section at the ‘Prince.’</em>
     </p>
     <p>
-      <em>Elaine Huang is an Assistant Data Editor for The Daily Princetonian. She is a sophomore concentrating in
-        Operations Research and Financial Engineering (ORFE) and can be reached at eh0313@princeton.edu.</em>
+      <em>Grace Kim is a contributor to the Data section at the ‘Prince.’</em>
     </p>
+    <p>
+      <em>Anika Maskara is an emeritus head Web Design and Development editor.</em>
+    </p>
+    <p>
+      <em>Web design by Head Web Design and Development Editor Ananya Grover</em>
+    </p>
+    <p>
+      <em>Graphics by Head Graphics Editor Katelyn Ryu</em>
+    </p>
+    <p>
+      <em>Please direct any corrections requests to corrections[at]dailyprincetonian.com.</em>
+    </p>
+  </div>
+
   </div>
 </body>
 
 
 <script type="module" src="indexgraph.js"></script>
-
 <script type="module" src="script.js"></script>
-<script type="module" src="nav.js"></script>
+
 
 </html>
